@@ -1,0 +1,123 @@
+<!-- CONTACT PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact</title>
+      <!-- page redirects itself to the welcome page after 20 minutes -->
+      <meta http-equiv="refresh" content="1200;url=index.html">
+      <!-- style sheet for the side bar and body -->
+      <link rel="stylesheet" href="sidebar.css">
+      <link rel="stylesheet" href="contact.css">
+    </head>
+
+    <body>
+
+    <!-- navigation bar -->
+    <img onclick="location.href = 'main.html';" class="logohide" src="icons/logo.png">
+
+    <ul class="sidenav">
+      <li>
+        <img onclick="location.href = 'main.html';" class="logo" src="icons/logo.png">
+      </li>
+      <li> 
+        <a onclick="location.href = 'facilities.html';">
+          <img class="facilitiesPage" src="icons/facilities.png">
+          <h8>FACILITIES</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'maintenance.html';">
+          <img class="maintenancePage" src="icons/CARETAKER.png">
+          <h8>MAINTENANCE</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'error.html';">
+          <img class="eventsPage" src="icons/events.png">
+          <h8>EVENTS</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'map.html';">
+          <img class="navigationPage" src="icons/NAVIGATION.png">
+          <h8>NAVIGATION</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'info.html';">
+          <img class="informationPage" src="icons/file.png">
+          <h8>INFO</h8>
+        </a>
+      </li>
+    </ul>
+
+    <!-- title -->
+    <div id="title">CONTACT FORM</div>
+    <h3>Choose the person and fill out the form.</h3>
+
+    <!-- buttons of people -->
+    <div class="people">
+      <div class="buttons_people" id="caretaker_id">
+        <button id="caretaker" class="button_people">CARETAKER</button>
+      </div>
+      <div class="buttons_people" id="council_id">
+        <button id="council" class="button_people">COUNCIL</button>
+      </div>
+      <div class="buttons_people" id="locksmith_id">
+        <button id="locksmith" class="button_people">LOCKSMITH</button>
+      </div>
+    </div>
+
+    <!-- contact form -->
+    <form onsubmit="return check()" novalidate autocomplete="off" action="submit.html">
+      <section class="form_content">
+        <div class="form">
+          <input type="text" required minlength="3" placeholder="Full Name" id="fullname" name="fullname">
+          <label for="fullname" class="label">Full Name</label>
+          <div id="error_name" class="emsg"></div> 
+        </div>
+        <div class="form">
+          <input type="number" required min="1" placeholder="Apartment Number" id="apartment" name="apartment">
+          <label for="apartment" class="label">Apartment Number</label>
+          <div id="error_apartment" class="emsg"></div>
+        </div>
+        <div class="form">
+          <input type="email" required placeholder="E-mail" id="email" name="email">
+          <label for="email" class="label">E-mail</label>
+          <div id="error_email" class="emsg"></div>
+        </div>
+        <div class="form">
+          <textarea rows="6" cols="60" placeholder="Message" id="message" name="message" required minlength="3"></textarea>
+          <label for="message" class="label">Message</label>
+          <div id="error_message" class="emsg"></div>
+        </div>
+        <div class="form" id="submit_button">
+          <input type="submit" id="submit" value="SUBMIT">
+        </div>
+      </section>
+    </form>
+ 
+    <!-- hidden burger menu-->
+    <div class="hide">
+      <ul class="menu">
+        <li><a class="menuItem" href="#">Facilites</a>
+        <li><a class="menuItem" href="#">Maintenance</a>
+        <li><a class="menuItem" href="#">Events</a>
+        <li><a class="menuItem" href="#">Navigation</a>
+        <li><a class="menuItem" href="#">Info</a>
+      </ul>
+      <button class="hamburger">
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+      </button>
+    </div>
+
+    <script src="contact.js"></script>     
+    <!-- script for hidden burger menu-->
+    <script src="burger.js"></script>
+      
+  </body>
+</html>

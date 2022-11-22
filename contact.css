@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
+:root {
+    --background: #3C3B38;
+    --old: #62605C;
+    --orange: #F77f00;
+    --white: #F7FAF4;
+    --grey: #C4C4C4;
+    --red: #ff5555;
+}
+
+body {
+    background-color: #3C3B38;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    background-image: url(sketch.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#title {
+    font-size: 80px;
+    font-weight: bold;
+    place-content: center;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #F7FAF4;
+}
+
+h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/* buttons for people */
+
+.people {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 60px;
+    margin: 20px;
+    text-align: center;
+    filter: drop-shadow(3px 6px 9px black);
+    border-radius: 10px;
+}
+
+.button_people {
+    width: 360px;
+    height: 60px;
+    color: #F7FAF4;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.2s ease-in-out;
+}
+
+.buttons_people {
+    border: none;
+    font-weight: bolder;
+    text-align: center;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    background-color: #F77f00;
+    border-radius: 10px;
+    transition: 0.2S ease-in-out;
+}
+
+.buttons_people:active {
+    box-shadow: inset 2px 4px 10px #000000;
+}
+
+/* hover */
+#council:hover{
+    color: #F77f00;
+    cursor: pointer;
+}
+
+#council_id:hover {
+    background-color: #F7FAF4;
+    cursor: pointer;
+}
+
+#caretaker:hover{
+    color: #F77f00;
+    cursor: pointer;
+}
+
+#caretaker_id:hover {
+    background-color: #F7FAF4;
+    cursor: pointer;
+}
+
+#locksmith:hover{
+    color: #F77f00;
+    cursor: pointer;
+}
+
+#locksmith_id:hover {
+    background-color: #F7FAF4;
+    cursor: pointer;
+}
+
+/* form */
+.form_content {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.form {
+    margin: 15px;
+    position: relative;
+    font-weight: bolder;
+    filter: drop-shadow(3px 6px 9px black);
+}
+
+.form input {
+    padding: 20px 20px;
+    font-size: 25px;
+    border: var(--white) solid 2px;
+    border-radius: 10px;
+    transition: 0.2s all ease-in-out;
+}
+
+.form textarea {
+    padding: 20px 20px;
+    font-size: 25px;
+    border: var(--white) solid 2px;
+    border-radius: 10px;
+    transition: 0.2s all ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* width of the form */
+input {
+    width: 1200px;
+}
+
+textarea {
+    width: 1200px;
+}
+
+/* hidden arrows from "number" inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* hidden placeholder */
+::placeholder {
+    color: transparent;
+}
+
+.form
+.label {
+    position: absolute;
+    top: 20px; /* position of displayed names */
+    left: 10px; /* position of displayed names */
+    padding: 0 15px;
+    font-size: 25px;
+    color: #3C3B38;
+    pointer-events: none;
+    transition: 0.2s all ease;
+    border-color: #C4C4C4;
+}
+
+.form 
+input:focus + 
+.label,
+.form
+input:not(:placeholder-shown) + 
+.label {
+    transform: translate(7px, -30px); /* new position of displayed text */
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+
+.form 
+textarea:focus + 
+.label,
+.form
+textarea:not(:placeholder-shown) + 
+.label {
+    transform: translate(7px, -30px);
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+
+/* submit button */
+#submit { 
+    background-color: var(--orange);
+    color: var(--white);
+    border-color: #F77f00;
+    width: 300px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    transition: 0.2s ease-in-out;
+    margin-top: -20px;
+}
+
+#submit:hover {
+    background-color: #F7FAF4;
+    color: #F77f00;
+    cursor: pointer;
+    border-color: #F7FAF4;
+}
+
+/* error messages */
+.emsg { 
+    color: var(--red); 
+    font-size: 15px;
+    margin: 3px 15px;
+    text-align: left;
+}
+
+.hide {
+  display:none;
+}
+
+@media only screen and (max-width: 1900px) {
+
+    #title {
+        font-size: 60px;
+        padding-bottom: 20px;
+    }
+
+    .people {
+        gap: 40px;
+        margin: 10px;
+    }
+
+    .button_people {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .buttons_people {
+        width: 200px;
+
+    }
+
+    .form {
+        margin: 10px;
+    }
+
+    .form input {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .form textarea {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    input {
+        width: 680px;
+    }
+    
+    textarea {
+        width: 680px;
+        font-size: 15px;
+    }
+
+    .form
+    .label {
+    top: 10px;
+    left: 5px; 
+    padding: 0 10px;
+    font-size: 20px;
+    }
+
+    .form 
+    input:focus + 
+    .label,
+    .form
+    input:not(:placeholder-shown) + 
+    .label {
+    transform: translate(7px, -20px);
+    font-size: 12px;
+    }
+
+    .form 
+    textarea:focus + 
+    .label,
+    .form
+    textarea:not(:placeholder-shown) + 
+    .label {
+    transform: translate(7px, -20px);
+    font-size: 12px;
+    }
+
+    #submit { 
+        width: 200px;
+        font-size: 20px;
+        height: 60px;
+        margin-top: -10px;
+    }
+
+    .emsg { 
+        font-size: 13px;
+        margin: -1px 13px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* burger menu */
+    .hide {
+        display: block;
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+    .logohide {
+        display: block;
+        position: absolute;
+        left: 80px;
+        top: 15px;  
+        width: 80px;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+
+    .logohide:hover {
+        cursor: pointer;
+    }
+
+
+    #title {
+        font-size: 30px;
+    }
+
+    input {
+        width: 300px;
+    }
+    
+    textarea {
+        width: 300px;
+    }
+
+    .buttons_people {
+        width: 85px;
+        margin-bottom: 5px;
+
+    }
+
+    .people {
+        gap: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .button_people {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    #submit {
+        width: 200px;
+        height: 40px;
+        font-size: 15px;
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+
+    .emsg { 
+        font-size: 10px;
+        margin: 3px 13px;
+    }
+
+    .form {
+        margin: 10px;
+    }
+
+    .form input {
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+
+    .form textarea {
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+
+    .form
+    .label {
+    top: 7px;
+    font-size: 18px;
+    }
+
+    .form 
+    input:focus + 
+    .label,
+    .form
+    input:not(:placeholder-shown) + 
+    .label {
+    transform: translate(7px, -15px);
+    }
+
+    .form 
+    textarea:focus + 
+    .label,
+    .form
+    textarea:not(:placeholder-shown) + 
+    .label {
+    transform: translate(7px, -15px);
+    }
+
+}

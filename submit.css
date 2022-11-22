@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
+:root {
+    --background: #3C3B38;
+    --old: #62605C;
+    --orange: #F77f00;
+    --white: #F7FAF4;
+    --grey: #C4C4C4;
+    --red: #ff5555;
+}
+
+body {
+    background-color: #3C3B38;
+    text-align: center;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    background-image: url(sketch.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+#confirmation {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0px 1px 1px black);
+}
+
+/* home button */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F77f00;
+    color: #F7FAF4;
+    border-radius: 10px;
+    width: 250px;
+    height: 60px;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    border: #F77f00 2px solid;
+    filter: drop-shadow(3px 6px 9px black);
+    transition: 0.2s ease-in-out;
+}
+
+#home:hover {
+    background-color: #F7FAF4;
+    color: #F77f00;
+    border: #f7faf4 2px solid;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 1900px) {
+    h1 {
+        font-size: 60px;
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    #home {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #confirmation {
+        width: 150px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #home {
+        width: 180px;
+        font-size: 20px;
+    }
+
+    #confirmation {
+        width: 80px;
+    }
+
+}
+

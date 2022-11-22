@@ -1,0 +1,88 @@
+<!-- NAVIGATION PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+      <title>Navigation</title>
+      <!-- page redirects itself to the welcome page after 20 minutes -->
+      <meta http-equiv="refresh" content="1200;url=index.html">
+      <!-- style sheet for the side bar and body -->
+      <link rel="stylesheet" href="sidebar.css">
+      <link rel="stylesheet" href="map.css">
+      <!-- style sheet for the map -->
+      <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- navigation bar -->
+        <img onclick="location.href = 'main.html';" class="logohide" src="icons/logo.png">
+
+        <ul class="sidenav">
+          <li>
+            <img onclick="location.href = 'main.html';" class="logo" src="icons/logo.png">
+          </li>
+          <li>
+            <a onclick="location.href = 'facilities.html';">
+              <img class="facilitiesPage" src="icons/facilities.png">
+              <h8>FACILITIES</h8>
+            </a>
+          </li>
+          <li> 
+            <a onclick="location.href = 'maintenance.html';">
+              <img class="maintenancePage" src="icons/CARETAKER.png">
+              <h8>MAINTENANCE</h8>
+            </a>
+          </li>
+          <li> 
+            <a onclick="location.href = 'error.html';">
+              <img class="eventsPage" src="icons/events.png">
+              <h8>EVENTS</h8>
+            </a>
+          </li>
+          <li> 
+            <a id="now">
+              <img class="navigationPage" src="icons/NAVIGATION.png">
+              <h8 id="now_id">NAVIGATION</h8>
+            </a>
+          </li>
+          <li> 
+            <a onclick="location.href = 'info.html';">
+              <img class="informationPage" src="icons/file.png">
+              <h8>INFO</h8>
+            </a>
+          </li>
+        </ul>
+
+        <!-- title -->
+        <div id="title">NAVIGATION</div>
+
+        <!-- map -->
+        <div id="map"></div>
+        
+        <!-- hidden burger menu-->
+        <div class="hide">
+          <ul class="menu">
+            <li><a class="menuItem" href="#">Facilites</a>
+            <li><a class="menuItem" href="#">Maintenance</a>
+            <li><a class="menuItem" href="#">Events</a>
+            <li><a class="menuItem" href="#">Navigation</a>
+            <li><a class="menuItem" href="#">Info</a>
+          </ul>
+          <button class="hamburger">
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </button>
+        </div>
+
+
+        <!-- script for the map -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+        <script src="map.js"></script>
+        <!-- script for hidden burger menu-->
+        <script src="burger.js"></script>
+
+    </body>
+</html>

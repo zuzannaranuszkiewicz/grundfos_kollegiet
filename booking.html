@@ -1,0 +1,170 @@
+<!-- BOOKING PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booking</title>
+        <!-- page redirects itself to the welcome page after 20 minutes -->
+        <meta http-equiv="refresh" content="1200;url=index.html">
+        <!-- style sheet for the side bar and body -->
+        <link rel="stylesheet" href="sidebar.css">
+        <link rel="stylesheet" href="booking.css">
+        <!-- style sheet for the icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- navigation bar -->
+        <img onclick="location.href = 'main.html';" class="logohide" src="icons/logo.png">
+
+        <ul class="sidenav">
+            <li>
+              <img onclick="location.href = 'main.html';" class="logo" src="icons/logo.png">
+            </li>
+            <li> <a onclick="location.href = 'facilities.html';">
+                    <img class="facilitiesPage" src="icons/facilities.png">
+                    <h8>FACILITIES</h8>
+                </a>
+            </li>
+            <li> 
+                <a onclick="location.href = 'maintenance.html';">
+                    <img class="maintenancePage" src="icons/CARETAKER.png">
+                    <h8>MAINTENANCE</h8>
+                </a>
+            </li>
+            <li> 
+                <a onclick="location.href = 'error.html';">
+                    <img class="eventsPage" src="icons/events.png">
+                    <h8>EVENTS</h8>
+                </a>
+            </li>
+            <li> 
+                <a onclick="location.href = 'map.html';">
+                    <img class="navigationPage" src="icons/NAVIGATION.png">
+                    <h8>NAVIGATION</h8>
+                </a>
+            </li>
+            <li> 
+                <a onclick="location.href = 'info.html';">
+                    <img class="informationPage" src="icons/file.png">
+                    <h8>INFO</h8>
+                </a>
+            </li>
+        </ul>
+        
+        <!-- title -->
+        <div id="title">BOOKING</div>
+        <h1 id="service">Select service:</h1>
+
+        <!-- service buttons -->
+        <div class="service">
+            <div class="buttons_service" id="machine_id">
+                <button id="machine" class="button_service">MACHINE</button>
+                <img id="info_machine" class="info" src="info.png">
+            </div>
+            <div class="buttons_service" id="kitchen_id">
+                <button id="kitchen" class="button_service">KITCHEN</button>
+                <img id="info_kitchen" class="info" src="info.png">
+            </div>
+        </div>
+
+    
+
+        <div class="second">
+            <!-- calendar -->
+            <!-- the idea was to make it possible to choose the date -->
+            <div id="contect_1">
+                <h1>Select date:</h1>
+                <div class="box_calendar">
+                    <div class="calendar">
+
+                        <!-- month -->
+                        <div class="month">
+                            <i class="fa-solid fa-angle-left
+                            prev"></i>
+                            <div class="date">
+                                <h2></h2>
+                                <p></p>
+                            </div>
+                            <i class="fa-solid fa-angle-right
+                            next"></i>
+                        </div>
+    
+                        <!-- weekdays -->
+                        <div class="week">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+
+                        <!-- days -->
+                        <div class="days"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- form -->
+            <div class="content_2">
+                <h1 id="personal">Personal info:</h1>
+
+                <form onsubmit="return check()" novalidate autocomplete="off" action="submit.html">
+                    <section class="form_content">
+                        <div class="form" id="full_name">
+                            <input type="text" required minlength="3" placeholder="Full Name" id="fullname" name="fullname">
+                            <label for="fullname" class="label">Full Name</label>
+                            <div id="error_name" class="emsg"></div> 
+                        </div>
+                        <div class="form">
+                            <input type="number" required min="1" placeholder="Apartment Number" id="apartment" name="apartment">
+                            <label for="apartment" class="label">Apartment Number</label>
+                            <div id="error_apartment" class="emsg"></div>
+                        </div>
+                        <div class="form">
+                            <input type="email" required placeholder="E-mail" id="email" name="email">
+                            <label for="email" class="label">E-mail</label>
+                            <div id="error_email" class="emsg"></div>
+                        </div>
+                        <div class="form" id="guests_close">
+                            <input type="number" placeholder="Number Of Guests" id="guests" name="guests">
+                            <label for="guests" class="label">Number Of Guests</label>
+                            <div id="error_guests" class="emsg"></div>
+                        </div>
+                        <div class="form" id="purpose_close">
+                            <input type="text" placeholder="Purpose Of The Meeting" id="purpose" name="purpose">
+                            <label for="purpose" class="label">Purpose Of The Meeting</label>
+                            <div id="error_purpose" class="emsg"></div>
+                        </div>
+                        <div class="form">
+                            <input type="submit" id="submit" value="SUBMIT">
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div> 
+
+        <!-- hidden burger menu-->
+        <div class="hide">
+            <ul class="menu">
+              <li><a class="menuItem" href="#">Facilites</a>
+              <li><a class="menuItem" href="#">Maintenance</a>
+              <li><a class="menuItem" href="#">Events</a>
+              <li><a class="menuItem" href="#">Navigation</a>
+              <li><a class="menuItem" href="#">Info</a>
+            </ul>
+            <button class="hamburger">
+              <i class="menuIcon material-icons">menu</i>
+              <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+
+        <script src="booking.js"></script>
+        <!-- script for hidden burger menu-->
+        <script src="burger.js"></script>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<!-- INFO PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- page redirects itself to the welcome page after 20 minutes -->
+        <meta http-equiv="refresh" content="1200;url=index.html">
+        <!-- style sheet for the side bar and body -->
+        <link rel="stylesheet" href="sidebar.css">
+        <link rel="stylesheet" href="info.css">
+        <title>Info</title>
+    </head>
+
+    <body>
+
+        <!-- navigation bar -->
+        <img onclick="location.href = 'main.html';" class="logohide" src="icons/logo.png">
+
+        <ul class="sidenav">
+            <li>
+                <img onclick="location.href = 'main.html';" class="logo" src="icons/logo.png">
+            </li>
+            <li>
+                <a onclick="location.href = 'facilities.html';">
+                    <img class="facilitiesPage" src="icons/facilities.png">
+                    <h8>FACILITIES</h8>
+                </a>
+            </li>
+            <li>
+                <a onclick="location.href = 'maintenance.html';">
+                    <img class="maintenancePage" src="icons/CARETAKER.png">
+                    <h8>MAINTENANCE</h8>
+                </a>
+            </li>
+            <li> 
+                <a onclick="location.href = 'error.html';">
+                    <img class="eventsPage" src="icons/events.png">
+                    <h8>EVENTS</h8>
+                </a>
+            </li>
+            <li> 
+                <a onclick="location.href = 'map.html';">
+                    <img class="navigationPage" src="icons/NAVIGATION.png">
+                    <h8>NAVIGATION</h8>
+                </a>
+            </li>
+            <li> 
+                <a id="now">
+                    <img class="informationPage" src="icons/file.png">
+                    <h8 id="now_id">INFO</h8>
+                </a>
+            </li>
+        </ul>
+  
+  
+        <!-- title -->
+        <div id="title">INFO</div>
+
+        <!-- information -->
+        <div class="container-fluid">
+            <h2></h2>
+            <div class="faq">
+                <div class="icon"></div>
+                <h5>PRINTING</h5>
+            </div>
+            <div class="panel">
+                <p>If you need to use the printer:</p>
+                <ul>
+                    <li>go to tinyurl.com,</li>
+                    <li>enter the code: 100684,</li>
+                    <li>choose your print and payment options.</li>
+                </ul>
+                <p>Location:</p>
+                <button class="click" onclick="location.href = 'facilities.html';">Study Room</button>
+            </div>
+
+            <div class="faq">
+                <div class="icon"></div>
+                <h5>TRASH</h5>
+            </div>
+            <div class="panel">
+                <p>We sort trash, using specific bins for:<p>
+                <ul>
+                    <li>plastic, metal & glass,</li>
+                    <li>glass & batteries,</li>
+                    <li>paper,</li>
+                    <li>cardboard.</li>
+                </ul>
+                <p>You have to take care of the larger items such as furniture or electronics yourself.</p>
+            </div>
+
+            <div class="faq">
+                <div class="icon"></div>
+                <h5>FURNITURE</h5>
+            </div>
+            <div class="panel">
+                <p>If you are looking for cheap furniture, check out these places:</p>
+                <ul>
+                    <li>REUSE Aarhus (free market),</li>
+                    <li>GulogGratis.dk (internet site),</li>
+                    <li>DBA (marketplace).</li>
+                </ul>
+                <p>You can also try to borrow furniture from the caretaker:</p>
+                <button class="click" onclick="location.href = 'contact.html';">Contact Form</button>
+            </div>
+
+            <div class="faq">
+                <div class="icon"></div>
+                <h5>BOOKING</h5>
+            </div>
+            <div class="panel">
+                <p>In Grundfos Kollegiet you can book:</p>
+                <ul>
+                    <li>a laundry machine:</li>
+                </ul>
+                <button class="click" onclick="location.href = 'booking.html';">Book A Machine</button>
+                <ul>   
+                    <li>the kitchen (since it’s impossible to book a common room):</li>
+                </ul>
+                <button class="click" onclick="location.href = 'booking.html';">Book A Kitchen</button>
+            </div>
+
+            <div class="faq">
+                <div class="icon"></div>
+                <h5>SMOKING</h5>
+            </div>
+            <div class="panel" id="smoking">
+                <p>Grundfos Kollegiet is a smoke free dorm.</p>
+                <p>If you wish to smoke, you are welcome to go outside the front door or to the terrace on 11th floor.
+                    Please don’t smoke on the rooftop terrace, since the floor is flammable.
+                </p>
+            </div>
+
+            <div class="faq">
+                <div class="icon"></div>
+                <h5>ADDITIONAL INFO</h5>
+            </div>
+            <div class="panel" id="addinfo">
+                <p>For additional information please scan the QR code:</p>
+                <img class="qrcode" src="icons/qrcode.png">
+            </div>
+        </div>
+
+        <!-- hidden burger menu-->
+        <div class="hide">
+            <ul class="menu">
+                <li><a class="menuItem" href="#">Facilites</a>
+                <li><a class="menuItem" href="#">Maintenance</a>
+                <li><a class="menuItem" href="#">Events</a>
+                <li><a class="menuItem" href="#">Navigation</a>
+                <li><a class="menuItem" href="#">Info</a>
+            </ul>
+            <button class="hamburger">
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+
+
+        <script src="info.js"></script>
+        <!-- script for hidden burger menu-->
+        <script src="burger.js"></script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!-- MAIN PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- page redirects itself to the welcome page after 20 minutes -->
+    <meta http-equiv="refresh" content="1200;url=index.html">
+    <link rel="stylesheet" href="main.css">
+    <!-- style sheet for the side bar and body -->
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    
+    <!-- title -->
+    <div id="title">HOW CAN I HELP?</div>
+
+
+    <!-- navigation: logo -->
+    <div class="sidenav">
+        <img href="mainPage.html" class="logo" src="icons/logo.png">
+    </div>
+
+        <!-- navigation: main -->
+    <div class="containerMain">
+        <button onclick="location.href = 'facilities.html';" class="maintbtn">
+            <img class="PageButton" id="facilities" src="icons/facilities.png">
+            <h1>FACILITIES</h1>
+        </button>
+        <button onclick="location.href = 'maintenance.html';" class="maintbtn">
+            <img class="PageButton" src="icons/CARETAKER.png">
+            <h1>MAINTENANCE</h1>
+        </button>
+        <button onclick="location.href = 'error.html';" class="maintbtn">
+            <img class="PageButton" src="icons/events.png">
+            <h1>EVENTS</h1>
+        </button>
+        <button onclick="location.href = 'map.html';" class="maintbtn">
+            <img class="PageButton" src="icons/NAVIGATION.png">
+            <h1>NAVIGATION</h1>
+        </button>
+        <div><img class="PageButton" src="icons/qrcode.png">
+        <h1>FACEBOOK GROUP</h1></div>
+        <button onclick="location.href = 'info.html';">
+            <img class="PageButton" id="code" src="icons/file.png" class="maintbtn">
+            <h1>INFO</h1>
+        </button>
+    </div>
+
+</body>
+</html>

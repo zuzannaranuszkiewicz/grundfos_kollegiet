@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+:root {
+    --background: #3C3B38;
+    --old: #62605C;
+    --orange: #F77f00;
+    --white: #F7FAF4;
+    --grey: #C4C4C4;
+    --red: #ff5555;
+}
+
+body {
+    background-color: #3C3B38;
+    text-align: center;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    background-image: url(sketch.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#title {
+    font-size: 80px;
+    font-weight: bold;
+    place-content: center;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #F7FAF4;
+}
+
+/* service buttons */
+.service {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    gap: 60px;
+    box-sizing: border-box;
+    display: flex;
+    text-align: left;
+}
+
+/* the placement of the subtitles */
+#service {
+    margin-left: -1040px;
+}
+
+h1 {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.service:hover {
+    cursor: pointer;
+}
+
+.buttons_service {
+    width: 600px;
+    height: 80px;
+    background: var(--orange);
+    padding: 0 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    filter: drop-shadow(3px 6px 9px black);
+}
+
+.button_service {
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.button_service:hover {
+    cursor: pointer;
+}
+
+
+.buttons_service:hover {
+    cursor: pointer;
+}
+
+/* info button
+the idea was to open a pop-up window when the button is clicked */
+.info {
+    width: 30px;
+    height: 30px;
+    opacity: 80%;
+    filter: drop-shadow(3px 6px 9px black);
+}
+
+/* calendar */
+.box_calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    filter: drop-shadow(3px 6px 9px black);
+}
+
+.calendar {
+    background: var(--white);
+    color: var(--background);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 15px;
+    text-align: center;
+}
+
+.week {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    font-weight: 600;
+}
+
+.week div {
+    display: grid;
+    place-items: center;
+    color: var(--grey)
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.days div {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: var(--white);
+}
+
+.today {
+    width: 80px;
+    height: 80px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.days div:hover:not(.today) {
+    border-color: var(--orange);
+}
+
+/* displayed days of next/previous months */ 
+.prev-date{
+    opacity: 0%;
+    cursor: default;
+
+}
+
+.next-date {
+    opacity: 0%;
+    cursor: default;
+}
+
+.prev:hover {
+    cursor: pointer;
+}
+
+.next:hover {
+    cursor: pointer;
+}
+
+
+/* form */
+.form_content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-flow: column;
+    border-radius: 10px;
+    filter: drop-shadow(3px 6px 9px black);
+}
+
+
+.form {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.form input {
+    padding: 14px 20px;
+    font-size: 25px;
+    border: var(--white) solid 2px;
+    border-radius: 10px;
+    transition: 0.2s all ease-in-out;
+}
+
+input {
+    width: 600px;
+}
+
+/* hiding arrows from "number" inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form input::placeholder {
+    color: transparent;
+}
+
+.form
+.label {
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    padding: 0 13px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #3C3B38;
+    pointer-events: none;
+    transition: 0.2s all ease;
+    border-color: #C4C4C4;
+}
+
+.form 
+input:focus + 
+.label,
+.form
+input:not(:placeholder-shown) + 
+.label {
+    transform: translate(7px, -30px);
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+
+#submit {
+    background-color: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+    width: 150px;
+    font-weight: bolder;
+    transition: 0.2s ease-in-out;
+
+}
+
+#submit:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    border-color: var(--white);
+    cursor: pointer;
+}
+
+
+.emsg { 
+    color: var(--red); 
+    font-size: 18px;
+    margin: 3px 13px;
+    text-align: left;
+
+}
+
+/* putting the calendar and the form in a row */
+.second {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+
+.hide {
+    display: none;
+}
+
+@media only screen and (max-width:1900px) {
+
+
+    #title {
+        font-size: 60px;
+        padding-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        
+    }
+
+    .buttons_service {
+        width: 300px;
+        height: 60px;
+    }
+
+    .service {
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    input {
+        width: 300px;
+    }
+
+    .box_calendar {
+        width: 300px;
+    }
+
+    .month {
+        font-size: 20px;
+    }
+
+    .days div {
+        width: 35px;
+        height: 35px;
+    }
+
+    .second {
+        gap: 40px;
+    }
+
+    .calendar {
+        padding: 25px;
+    }
+
+    .form {
+        margin-bottom: 12px;
+    }
+
+    .form input {
+        font-size: 18px;
+    }
+
+    .form
+    .label {
+        top: 13px;
+        left: 3px;
+        font-size: 18px;
+    }
+
+    #submit {
+        width: 150px;
+        padding: 10px;
+    }  
+    
+    #service {
+        margin-left: -460px;
+    }
+
+    .form 
+    input:focus + 
+    .label,
+    .form
+    input:not(:placeholder-shown) + 
+    .label {
+    transform: translate(7px, -22px);
+    font-size: 15px;
+    }
+
+    .emsg { 
+        font-size: 15px;
+        margin: 1px 13px;
+    }
+
+    .form
+    .label {
+        top: 15px;
+    }
+    
+}
+
+@media only screen and (max-width:700px) {
+
+    #title {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /* burger menu */
+    .hide {
+        display: block;
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+    .logohide {
+        display: block;
+        position: absolute;
+        left: 80px;
+        top: 15px;  
+        width: 80px;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+
+    .logohide:hover{
+        cursor: pointer;
+    }
+
+    .second {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .emsg { 
+        margin: 3px 13px;
+    }
+
+    #service {
+        margin-left: -160px;
+    }
+
+    .days div {
+        width: 40px;
+        height:40px;
+    }
+
+    .calendar {
+        padding: 10px;
+    }
+
+    .buttons_service {
+        width: 140px;
+        height: 40px;
+    }
+
+    .service {
+        gap: 20px;
+    }
+
+    .button_service {
+        font-size: 15px;
+    }
+
+    .buttons_service {
+        padding: 0 15px;
+    }
+    .info {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+

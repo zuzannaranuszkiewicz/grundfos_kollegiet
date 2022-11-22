@@ -1,0 +1,151 @@
+<!-- MAINTENANCE PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Maintenance Page</title>
+    <meta name="Maintenance" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- page redirects itself to the welcome page after 20 minutes -->
+    <meta http-equiv="refresh" content="1200;url=index.html">
+    <!-- style sheet for the side bar and body -->
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="maintenance.css">
+  </head>
+
+  <body>
+  
+    <!-- navigation bar -->
+    <img onclick="location.href = 'main.html';" class="logohide" src="icons/logo.png">
+
+    <ul class="sidenav">
+      <li>
+        <img onclick="location.href = 'main.html';" class="logo" src="icons/logo.png">
+      </li>
+      <li>
+        <a onclick="location.href = 'facilities.html';">
+          <img class="facilitiesPage" src="icons/facilities.png">
+          <h8>FACILITIES</h8>
+        </a>
+      </li>
+      <li> 
+        <a id="now">
+          <img class="maintenancePage" src="icons/CARETAKER.png">
+          <h8 id="now_id">MAINTENANCE</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'error.html';">
+          <img class="eventsPage" src="icons/events.png">
+          <h8>EVENTS</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'map.html';">
+          <img class="navigationPage" src="icons/NAVIGATION.png">
+          <h8>NAVIGATION</h8>
+        </a>
+      </li>
+      <li> 
+        <a onclick="location.href = 'info.html';">
+          <img class="informationPage" src="icons/file.png">
+          <h8>INFO</h8>
+        </a>
+      </li>
+    </ul>
+
+
+  <!-- title -->
+  <div class="title">MAINTENANCE</div>
+
+
+  <!-- cards -->
+  <div class="flex">
+    <div class="wrapper">
+      <!-- dots for the carousel -->
+      <div class="carousel owl-carousel">
+
+        <!-- caretaker -->
+        <div class="card">
+          <div class="img">
+            <div class="image"><img src="pictures/maintenanceguy.png" alt="Picture of a woman"></div>
+            <!-- source -->
+            <div class="h7"><h7>credits: Unsplash, 2020</h7></div>
+          </div>
+          <div class="everything">
+            <section>
+              <span class="profession">Caretaker</span>
+              <span class="name">Marie Skindbjerg</span>
+              <span class="description">Maintenance of the Apartments</span>
+              <span class="info">E-mail: msk@deas.dk <br>
+                Phone: 3946 6374</span>
+              <button class="contactMe" onclick="location.href = 'contact.html';">CONTACT ME</button>
+            </section>
+          </div>
+        </div>
+
+        <!-- the residents' council-->
+        <div class="card">
+          <div class="img">
+            <div class="image"><img src="pictures/councilguy.png" alt="Picture of a man"></div>
+            <!-- source -->
+            <div class="h7"><h7>credits: Unsplash, 2018</h7></div>
+          </div>
+          <div class="everything">
+            <section>
+              <span class="profession">The Residents' Council</span>
+              <span class="description">Concerns and Suggestions</span>
+              <span class="info"> Phone: 5538 1240 <br>
+                E-mail: gkb@council.com</span>
+              <button class="contactMe" onclick="location.href = 'contact.html';">CONTACT ME</button>
+            </section>
+          </div>
+        </div>
+
+        <!-- locksmith -->
+        <div class="card">
+          <div class="img">
+          <div class="image"><img src="pictures/locksmithguy.png" alt="Picture of a man"></div>
+            <!-- source -->
+            <div class="h7"><h7>credits: Unsplash, 2020</h7></div>
+          </div>
+          <div class="everything">
+            <section>
+              <span class="profession">Locksmith</span>
+              <span class="name">Bonne Låseservice</span>
+              <span class="info">Phone: 7070 2190 <br>
+                Our system number is: C0268E</span>
+              <button class="contactMe" onclick="location.href = 'contact.html';">CONTACT ME</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- hidden burger menu-->
+  <div class="hide">
+    <ul class="menu">
+      <li><a class="menuItem" href="#">Facilites</a>
+      <li><a class="menuItem" href="#">Maintenance</a>
+      <li><a class="menuItem" href="#">Events</a>
+      <li><a class="menuItem" href="#">Navigation</a>
+      <li><a class="menuItem" href="#">Info</a>
+    </ul>
+    <button class="hamburger">
+      <i class="menuIcon material-icons">menu</i>
+      <i class="closeIcon material-icons">close</i>
+    </button>
+  </div>
+
+  <!-- script for the carousel -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="maintenance.js"></script>
+  <!-- script for hidden burger menu-->
+  <script src="burger.js"></script>
+  
+</body>
+
+</html>

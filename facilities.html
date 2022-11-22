@@ -1,0 +1,180 @@
+<!-- FACILITIES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Facilities</title>
+      <!-- page redirects itself to the welcome page after 20 minutes -->
+      <meta http-equiv="refresh" content="1200;url=index.html">
+      <!-- style sheet for the side bar and body -->
+      <link rel="stylesheet" href="sidebar.css">
+      <link rel="stylesheet" href="facilities.css">
+      <!-- style sheet for the arrow on responsive menu -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+
+    <body>
+
+      <!-- navigation bar -->
+      <img onclick="location.href = 'main.html';" class="logohide" src="icons/logo.png">
+
+      <ul class="sidenav">
+        <li>
+          <img onclick="location.href = 'main.html';" class="logo" src="icons/logo.png">
+        </li>
+        <li>
+          <a id="now">
+            <img class="facilitiesPage" src="icons/facilities.png">
+            <h8 id="now_id">FACILITIES</h8>
+          </a>
+        </li>
+        <li> 
+          <a onclick="location.href = 'maintenance.html';">
+            <img class="maintenancePage" src="icons/CARETAKER.png">
+            <h8>MAINTENANCE</h8>
+          </a>
+        </li>
+        <li> 
+          <a onclick="location.href = 'error.html';">
+            <img class="eventsPage" src="icons/events.png">
+            <h8>EVENTS</h8>
+          </a>
+        </li>
+        <li> 
+          <a onclick="location.href = 'map.html';">
+            <img class="navigationPage" src="icons/NAVIGATION.png">
+            <h8>NAVIGATION</h8>
+          </a>
+        </li>
+        <li> 
+          <a onclick="location.href = 'info.html';">
+            <img class="informationPage" src="icons/file.png">
+            <h8>INFO</h8>
+          </a>
+        </li>
+      </ul>
+
+      <!-- title -->
+      <div id="title">FACILITIES</div>
+      <section>
+        <h3>Here you can find useful information about facility rooms.</h3>
+        
+        <!-- responsive menu -->
+        <!-- the idea was to display this menu (and hide the "buttons" class) when the site is opened on a phone -->
+        <div class="container-fluid">
+          <div class="faq">
+            <div class="icon"></div>
+            <h5 id="faq">KITCHEN</h5>
+          </div>
+          <div class="panel">
+            <ul>
+              <li>COMMON ROOM</li>
+              <li>LAUNDRY ROOM</li>
+              <li>STUDY ROOM</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- buttons (menu) -->
+        <div class="buttons">
+          <button class="names active" data-id="kitchen">KITCHEN</button>
+          <button class="names" data-id="common">COMMON ROOM</button>
+          <button class="names" data-id="laundry">LAUNDRY ROOM</button>
+          <button class="names" data-id="study">STUDY ROOM</button>
+        </div>
+
+        <!-- information about different facilities -->
+        <section class="descriptions">
+        <!-- "active" in the code means "displayed"-->
+          <div class="content active" id="kitchen">
+            <div clas="img">
+              <div><img src="kitchen.png" class="photos" alt="photo of the kitchen"></div>
+              <!-- source -->
+              <div class="h7"><h7>credits: Ranszkiewicz, 2022</h7></div>
+            </div>
+            <div class="contenti">
+              <span id="book">
+                <h4>LOCATION:<br> 
+                  11th floor, across from the elevator</h4>
+                <p>DESCRIPTION:<br>The kitchen is the room 
+                  furthest away from the terasse, 
+                  where residents can prepare their meals. It can be booked.</p>
+                <button class="booking" onclick="location.href = 'booking.html';">BOOKING</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="content" id="common">
+            <div clas="img">
+              <div><img src="common.png" class="photos" alt="photo of the common room"></div>
+              <!-- source -->
+              <div class="h7"><h7>credits: Grundfos Kollegiet, n.d.</h7></div>
+            </div>
+            <div class="contenti">
+              <span id="book">
+                <h4>LOCATION:<br> 
+                  11th floor, across from the elevator (next to the terasse)</h4>
+                <p>DESCRIPTION:<br>The common room is the meeting place for all the residents, that is fully equipped. 
+                  You can bring maximum of 6 guests but you cannot book it - for that use the kitchen.</p>
+              </span>    
+            </div>
+          </div>
+
+          <div class="content" id="laundry">
+            <div class="img">
+              <div><img src="laundry.png" class="photos" alt="photo of the laundry room"></div>
+              <!-- source -->
+              <div class="h7"><h7>credits: Grundfos Kollegiet, n.d.</h7></div>
+            </div>
+            <div class="contenti">
+              <span id="book">
+                <h4>LOCATION:<br> Basement behind the door 
+                  to the bicycle storage</h4>
+                <p>DESCRIPTION:<br>The launderette  has laundry machines, but also tumble dryers and vacuum cleaners. 
+                  It has 9 machines that can be used and booked from 6am to 11pm.</p>
+                <button class="booking" onclick="location.href = 'booking.html';">BOOKING</button>
+              </span>
+            </div>
+          </div>
+
+          <div class="content" id="study">
+            <div class="img">
+            <div><img src="study.png" class="photos" alt="photo of the study room"></div>
+            <!-- source -->
+            <div class="h7"><h7>credits: Ranszkiewicz, 2022</h7></div>
+            </div>
+            <div class="contenti">
+              <span id="book">
+                <h4>LOCATION:<br> Ground floor, across from the main entrance</h4>
+                <p>DESCRIPTION:<br>In the study room residents can go to escape the noise and many distractions 
+                  in their own apartments when studying. There is also possibility to print out documents.</p>
+              </span>
+            </div>                
+          </div>
+        </section>
+      </section>
+
+      <!-- hidden burger menu-->
+      <!-- the idea is to display this hidden menu (and hide the "sidenav" class) when the site is opened on a phone -->
+      <div class="hide">
+        <ul class="menu">
+          <li><a class="menuItem" href="#">Facilites</a>
+          <li><a class="menuItem" href="#">Maintenance</a>
+          <li><a class="menuItem" href="#">Events</a>
+          <li><a class="menuItem" href="#">Navigation</a>
+          <li><a class="menuItem" href="#">Info</a>
+        </ul>
+        <button class="hamburger">
+          <i class="menuIcon material-icons">menu</i>
+          <i class="closeIcon material-icons">close</i>
+        </button>
+      </div>
+
+      <script src="facilities.js"></script>
+      <!-- script for hidden burger menu-->
+      <script src="burger.js"></script>
+
+    </body>
+</html>
